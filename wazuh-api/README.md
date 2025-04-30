@@ -21,7 +21,7 @@ Ce script permet de rechercher les vulnérabilités associées à un agent Wazuh
 
 ## Installation
 
-1. Cloner le dépôt ou télécharger le fichier `vulnerability2.py`
+1. Cloner le dépôt ou télécharger le fichier `vulnerability.py`
 2. Installer les dépendances requises :
 
 ```bash
@@ -31,7 +31,7 @@ pip install requests
 3. Rendre le script exécutable (sous Linux/macOS) :
 
 ```bash
-chmod +x vulnerability2.py
+chmod +x vulnerability.py
 ```
 
 ## Utilisation
@@ -39,7 +39,7 @@ chmod +x vulnerability2.py
 ### Format de base
 
 ```bash
-python3 vulnerability2.py -H <hostname> -u <username> -p <password> -i <agent_id> [options]
+python3 vulnerability.py -H <hostname> -u <username> -p <password> -i <agent_id> [options]
 ```
 
 ### Options disponibles
@@ -59,19 +59,19 @@ python3 vulnerability2.py -H <hostname> -u <username> -p <password> -i <agent_id
 #### Sortie JSON standard
 
 ```bash
-python3 vulnerability2.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004
+python3 vulnerability.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004
 ```
 
 #### Exclure certaines CVE
 
 ```bash
-python3 vulnerability2.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004 -e CVE-2023-52500,CVE-2023-52518
+python3 vulnerability.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004 -e CVE-2023-52500,CVE-2023-52518
 ```
 
 #### Format de sortie lisible
 
 ```bash
-python3 vulnerability2.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004 --human
+python3 vulnerability.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004 --human
 ```
 
 ### Codes de retour
@@ -152,6 +152,4 @@ Attention : Ce script désactive la vérification des certificats SSL (`verify=F
 
 Les contributions sont les bienvenues ! N'hésitez pas à soumettre des pull requests ou à ouvrir des issues pour améliorer ce script.
 
-## Licence
 
-[Insérer ici votre licence]
