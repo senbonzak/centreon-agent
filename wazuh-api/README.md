@@ -59,19 +59,19 @@ python3 vulnerability.py -H <hostname> -u <username> -p <password> -i <agent_id>
 #### Sortie JSON standard
 
 ```bash
-python3 vulnerability.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004
+python3 vulnerability.py -H 10.10.10.10 -u kibanaserver -p 'password' -i 004
 ```
 
 #### Exclure certaines CVE
 
 ```bash
-python3 vulnerability.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004 -e CVE-2023-52500,CVE-2023-52518
+python3 vulnerability.py -H 10.10.10.10 -u kibanaserver -p 'password' -i 004 -e CVE-2023-52500,CVE-2023-52518
 ```
 
 #### Format de sortie lisible
 
 ```bash
-python3 vulnerability.py -H 10.1.1.29 -u kibanaserver -p 'password' -i 004 --human
+python3 vulnerability.py -H 10.10.10.10 -u kibanaserver -p 'password' -i 004 --human
 ```
 
 ### Codes de retour
